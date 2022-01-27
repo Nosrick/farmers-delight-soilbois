@@ -2,7 +2,6 @@ package com.gitlab.nosrick.soilbois.registry;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
 import com.gitlab.nosrick.soilbois.block.OatCropBlock;
-import com.gitlab.nosrick.soilbois.block.TaginePotBlock;
 import com.nhoryzon.mc.farmersdelight.block.WildCropBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -18,9 +17,7 @@ import java.util.function.Supplier;
 public enum BlockRegistry {
 
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
-    WILD_OATS("wild_oats", WildCropBlock::new, true),
-
-    TAGINE_POT("tagine_pot", TaginePotBlock::new);
+    WILD_OATS("wild_oats", WildCropBlock::new, true);
 
     private final String pathName;
     private final Supplier<Block> blockSupplier;

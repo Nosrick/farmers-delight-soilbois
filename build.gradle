@@ -42,9 +42,6 @@ dependencies {
 
     modImplementation("curse.maven:farmers-delight-fabric-482834:${project.farmersdelight_version}")
 
-    modCompileOnly("squeek.appleskin:appleskin-fabric:mc1.18-2.2.0:api") {
-        transitive = false
-    }
     modRuntimeOnly("curse.maven:farmers-delight-fabric-482834:${project.farmersdelight_version}")
     modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
 }
