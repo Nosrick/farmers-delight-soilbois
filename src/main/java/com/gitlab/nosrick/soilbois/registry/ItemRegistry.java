@@ -21,6 +21,8 @@ public enum ItemRegistry {
     SEITAN_BACON("seitan_bacon", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_BACON.get()))),
     SEITAN_SANDWICH("seitan_sandwich", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_SANDWICH.get()))),
 
+    COTTON_SEEDS("cotton_seeds", () -> new ModBlockItem(BlockRegistry.COTTON_CROPS.get())),
+
     OATS("oats", () -> new ModBlockItem(BlockRegistry.OAT_CROPS.get())),
     WILD_OATS("wild_oats", () -> new ModBlockItem(BlockRegistry.WILD_OATS.get())),
     OAT_MILK("oat_milk", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.OAT_MILK.get()))),
