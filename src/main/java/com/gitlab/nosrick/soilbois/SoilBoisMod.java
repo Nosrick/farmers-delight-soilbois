@@ -32,9 +32,9 @@ public class SoilBoisMod implements ModInitializer {
             if (id.equals(GRASS_LOOT_ID)) {
                 FabricLootPoolBuilder builder = FabricLootPoolBuilder
                         .builder()
-                        .rolls(ConstantLootNumberProvider.create(0.5f))
+                        .rolls(ConstantLootNumberProvider.create(1f))
                         .with(ItemEntry.builder(ItemRegistry.OATS.get()))
-                        .rolls(ConstantLootNumberProvider.create(0.5f))
+                        .rolls(ConstantLootNumberProvider.create(1f))
                         .with(ItemEntry.builder(ItemRegistry.COTTON_SEEDS.get()));
 
                 table.pool(builder);
