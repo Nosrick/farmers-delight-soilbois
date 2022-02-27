@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.gitlab.nosrick.soilbois.SoilBoisMod"
+    ],
+    "client": [
+      "com.gitlab.nosrick.soilbois.SoilBoisModClient"
     ]
   },
   "mixins": [
