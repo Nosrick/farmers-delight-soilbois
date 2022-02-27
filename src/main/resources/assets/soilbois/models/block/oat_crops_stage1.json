@@ -1,6 +1,6 @@
 {
-  "parent": "farmersdelight:block/crop_cross",
+  "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "soilbois:block/oat_crops_stage1"
+    "crop": "soilbois:block/oat_crops_stage1"
   }
 }
