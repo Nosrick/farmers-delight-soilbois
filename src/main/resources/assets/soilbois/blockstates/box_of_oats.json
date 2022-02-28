@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "soilbois:block/box_of_oats"
+    },
+    "facing=south": {
+      "model": "soilbois:block/box_of_oats",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "soilbois:block/box_of_oats",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "soilbois:block/box_of_oats",
+      "y": 270
     }
   }
 }

@@ -1,6 +1,7 @@
 package com.gitlab.nosrick.soilbois.registry;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
+import com.gitlab.nosrick.soilbois.block.BoxOfOatsBlock;
 import com.gitlab.nosrick.soilbois.block.CottonCropBlock;
 import com.gitlab.nosrick.soilbois.block.OatCropBlock;
 import com.nhoryzon.mc.farmersdelight.block.WildCropBlock;
@@ -9,6 +10,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -20,7 +22,7 @@ import java.util.function.Supplier;
 
 public enum BlockRegistry {
 
-    BOX_OF_OATS("box_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL))),
+    BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
     WILD_OATS("wild_oats", WildCropBlock::new, true),
     COTTON_CROPS("cotton_crops", CottonCropBlock::new, true);
