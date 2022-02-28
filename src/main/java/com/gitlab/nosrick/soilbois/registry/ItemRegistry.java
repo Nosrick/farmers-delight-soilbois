@@ -1,10 +1,14 @@
 package com.gitlab.nosrick.soilbois.registry;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
+import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
 import com.nhoryzon.mc.farmersdelight.item.ModBlockItem;
 import com.nhoryzon.mc.farmersdelight.item.ModItemSettings;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -23,7 +27,13 @@ public enum ItemRegistry {
 
     COTTON_SEEDS("cotton_seeds", () -> new ModBlockItem(BlockRegistry.COTTON_CROPS.get())),
 
-    OATS("oats", () -> new ModBlockItem(BlockRegistry.OAT_CROPS.get())),
+    OATS("oats", () -> new BlockItem(
+            BlockRegistry.OAT_CROPS.get(),
+            new FabricItemSettings()
+                    .group(FarmersDelightMod.ITEM_GROUP)
+                    .food(new FoodComponent.Builder()
+                            .hunger(-2)
+                            .build()))),
     WILD_OATS("wild_oats", () -> new ModBlockItem(BlockRegistry.WILD_OATS.get())),
     OAT_MILK("oat_milk", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.OAT_MILK.get()))),
     PLAIN_PORRIDGE("plain_porridge", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PLAIN_PORRIDGE.get()))),

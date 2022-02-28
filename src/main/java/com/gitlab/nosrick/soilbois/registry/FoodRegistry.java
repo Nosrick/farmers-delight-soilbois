@@ -23,7 +23,7 @@ public enum FoodRegistry {
 
     OAT_MILK(
             4,
-            0.2f,
+            0.5f,
             new StatusEffectInstance(EffectsRegistry.COMFORT.get()),
             100f,
             false,
@@ -31,11 +31,11 @@ public enum FoodRegistry {
             true),
     PLAIN_PORRIDGE(
             10,
-            0.7f,
+            0.6f,
             false),
     FRUIT_PORRIDGE(
             12,
-            0.73f,
+            0.8f,
             false),
 
     PLANT_CHEESE(

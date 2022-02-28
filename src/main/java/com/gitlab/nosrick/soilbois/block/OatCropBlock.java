@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.RavagerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -83,6 +84,11 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         return (world.getLightLevel(pos, 0) >= 8 || world.isSkyVisible(pos)) && super.canPlaceAt(state, world, pos);
+    }
+
+    @Override
+    protected ItemConvertible getSeedsItem() {
+        return ItemRegistry.OATS.get();
     }
 
     @Override
