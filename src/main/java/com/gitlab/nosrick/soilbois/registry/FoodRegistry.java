@@ -8,10 +8,10 @@ public enum FoodRegistry {
 
     RAW_SEITAN(4, 0.4f, false),
     COOKED_SEITAN(16, 0.8f, false),
-    RAW_SEITAN_PATTY(1, 0.1f, false),
-    COOKED_SEITAN_PATTY(4, 0.4f, false),
-    RAW_SEITAN_BACON(1, 0f, false),
-    SEITAN_BACON(2, 0.1f, false),
+    RAW_SEITAN_PATTY(1, 0.4f, false),
+    COOKED_SEITAN_PATTY(4, 0.8f, false),
+    RAW_SEITAN_BACON(1, 0.4f, false),
+    SEITAN_BACON(2, 0.8f, false),
     SEITAN_SANDWICH(
             12,
             0.85f,
@@ -44,7 +44,7 @@ public enum FoodRegistry {
             false),
     PLANT_CHEESE_SLICE(
             2,
-            0.2f,
+            0.5f,
             false);
 
     private final FoodComponent food;
