@@ -6,11 +6,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.block.Blocks;
+import net.minecraft.loot.condition.LootConditionTypes;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.loot.provider.number.LootNumberProvider;
-import net.minecraft.loot.provider.number.LootNumberProviderType;
-import net.minecraft.loot.provider.number.LootNumberProviderTypes;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,18 +25,5 @@ public class SoilBoisMod implements ModInitializer {
 
         BlockRegistry.registerAll();
         ItemRegistry.registerAll();
-
-        LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, table, setter) -> {
-            if (id.equals(GRASS_LOOT_ID)) {
-                FabricLootPoolBuilder builder = FabricLootPoolBuilder
-                        .builder()
-                        .rolls(ConstantLootNumberProvider.create(1f))
-                        .with(ItemEntry.builder(ItemRegistry.OATS.get()))
-                        .rolls(ConstantLootNumberProvider.create(1f))
-                        .with(ItemEntry.builder(ItemRegistry.COTTON_SEEDS.get()));
-
-                table.pool(builder);
-            }
-        });
     }
 }
