@@ -19,7 +19,7 @@
                   }
                 }
               ],
-              "name": "minecraft:string"
+              "name": "soilbois:cotton_puff"
             },
             {
               "type": "minecraft:item",
@@ -61,7 +61,7 @@
               }
             }
           ],
-          "name": "minecraft:string"
+          "name": "soilbois:cotton_puff"
         }
       ],
       "conditions": [

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "soilbois:cotton_puff"
+    },
+    {
+      "item": "soilbois:cotton_puff"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string"
+  }
+}
