@@ -7,8 +7,11 @@ import com.nhoryzon.mc.farmersdelight.block.WildCropBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -17,6 +20,7 @@ import java.util.function.Supplier;
 
 public enum BlockRegistry {
 
+    BOX_OF_OATS("box_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL))),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
     WILD_OATS("wild_oats", WildCropBlock::new, true),
     COTTON_CROPS("cotton_crops", CottonCropBlock::new, true);

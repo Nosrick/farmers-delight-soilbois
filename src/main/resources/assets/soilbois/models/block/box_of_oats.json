@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "soilbois:block/box_of_oats",
+		"particle": "soilbois:block/box_of_oats"
+	},
+	"elements": [
+		{
+			"name": "box",
+			"from": [5, 0, 6],
+			"to": [11, 8, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 8], "texture": "#0"},
+				"east": {"uv": [0, 8, 4, 16], "texture": "#0"},
+				"south": {"uv": [6, 0, 12, 8], "texture": "#0"},
+				"west": {"uv": [0, 8, 4, 16], "texture": "#0"},
+				"up": {"uv": [10, 12, 4, 8], "texture": "#0"},
+				"down": {"uv": [10, 12, 4, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, 130, 0],
+			"translation": [0, 4.5, 0],
+			"scale": [1.4, 1.4, 1.4]
+		}
+	}
+}
