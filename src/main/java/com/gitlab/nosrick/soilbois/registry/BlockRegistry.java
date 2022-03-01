@@ -24,7 +24,6 @@ public enum BlockRegistry {
 
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
-    WILD_OATS("wild_oats", WildCropBlock::new, true),
     COTTON_CROPS("cotton_crops", CottonCropBlock::new, true);
 
     private final String pathName;
