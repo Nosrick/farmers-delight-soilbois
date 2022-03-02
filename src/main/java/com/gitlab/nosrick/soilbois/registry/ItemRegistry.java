@@ -43,7 +43,10 @@ public enum ItemRegistry {
 
     AGAR("agar", () -> new Item(new ModItemSettings())),
     PLANT_CHEESE("plant_cheese", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PLANT_CHEESE.get()))),
-    PLANT_CHEESE_SLICE("plant_cheese_slice", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PLANT_CHEESE_SLICE.get())));
+    PLANT_CHEESE_SLICE("plant_cheese_slice", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PLANT_CHEESE_SLICE.get()))),
+
+    FRUIT_COMPOTE("fruit_compote", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.FRUIT_COMPOTE.get()))),
+    MUSHROOM_STOCK("mushroom_stock", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.MUSHROOM_STOCK.get())));
 
     private final String pathName;
     private final Supplier<Item> itemSupplier;

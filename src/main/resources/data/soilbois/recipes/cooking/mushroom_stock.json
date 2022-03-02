@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "fabric:mushrooms"
+    },
+    {
+      "tag": "fabric:mushrooms"
+    },
+    {
+      "tag": "fabric:mushrooms"
+    },
+    {
+      "tag": "fabric:mushrooms"
+    }
+  ],
+  "result": {
+    "item": "soilbois:mushroom_stock"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "cookingtime": 200
+}

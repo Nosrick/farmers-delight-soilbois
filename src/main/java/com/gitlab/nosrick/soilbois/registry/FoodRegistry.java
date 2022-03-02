@@ -46,7 +46,10 @@ public enum FoodRegistry {
     PLANT_CHEESE_SLICE(
             2,
             0.5f,
-            false);
+            false),
+
+    FRUIT_COMPOTE(2, 0.4f, false),
+    MUSHROOM_STOCK(2, 0.8f, false);
 
     private final FoodComponent food;
 
