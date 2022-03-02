@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "soilbois:box_of_oats"
+    },
+    {
+      "item": "soilbois:box_of_oats"
+    },
+    {
+      "item": "soilbois:box_of_oats"
+    }
+  ],
+  "result": {
+    "item": "soilbois:oat_milk",
+    "count": 9
+  }
+}
