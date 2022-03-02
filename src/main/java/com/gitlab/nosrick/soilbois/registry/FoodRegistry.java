@@ -21,6 +21,7 @@ public enum FoodRegistry {
             false,
             false),
 
+    OATS(-2, 0.3f, false),
     OAT_MILK(
             4,
             0.5f,

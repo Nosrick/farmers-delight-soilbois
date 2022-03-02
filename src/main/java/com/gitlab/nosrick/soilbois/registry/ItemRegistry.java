@@ -6,6 +6,7 @@ import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
 import com.nhoryzon.mc.farmersdelight.item.ModBlockItem;
 import com.nhoryzon.mc.farmersdelight.item.ModItemSettings;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
@@ -33,9 +34,7 @@ public enum ItemRegistry {
             BlockRegistry.OAT_CROPS.get(),
             new FabricItemSettings()
                     .group(FarmersDelightMod.ITEM_GROUP)
-                    .food(new FoodComponent.Builder()
-                            .hunger(-2)
-                            .build()))),
+                    .food(FoodRegistry.OATS.get()))),
     BOX_OF_OATS("box_of_oats", () -> new ModBlockItem(BlockRegistry.BOX_OF_OATS.get())),
     CRATE_OF_OATS("crate_of_oats", () -> new ModBlockItem(BlockRegistry.CRATE_OF_OATS.get())),
     OAT_MILK("oat_milk", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.OAT_MILK.get()))),
@@ -67,7 +66,16 @@ public enum ItemRegistry {
             if (value.burnTime != null) {
                 FuelRegistry.INSTANCE.add(value.get(), value.burnTime);
             }
+
+            if(value.item.isFood()
+                && value.item.getFoodComponent().getSaturationModifier() > 0f) {
+                CompostingChanceRegistry.INSTANCE.add(
+                        value.item,
+                        value.item.getFoodComponent().getSaturationModifier());
+            }
         }
+
+        CompostingChanceRegistry.INSTANCE.add(COTTON_SEEDS.get(), 0.3f);
     }
 
     public Item get() {
