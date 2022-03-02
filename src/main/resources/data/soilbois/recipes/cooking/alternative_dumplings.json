@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "c:pasta"
+    },
+    {
+      "tag": "c:vegetables"
+    },
+    {
+      "tag": "c:vegetables"
+    },
+    [
+      {
+        "tag": "c:raw_meat"
+      },
+      {
+        "tag": "c:mushrooms"
+      }
+    ]
+  ],
+  "result": {
+    "item": "farmersdelight:dumplings",
+    "count": 2
+  }
+}

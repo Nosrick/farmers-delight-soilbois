@@ -4,7 +4,7 @@
     "#soilbois:plant_milks",
     "minecraft:milk_bucket",
     {
-      "id": "farmersdelight:milk_bottle",
+      "id": "#fabric:milk",
       "required": false
     }
   ]

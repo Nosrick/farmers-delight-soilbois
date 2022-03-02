@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "c:vegetables"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:pasta"
+    },
+    {
+      "tag": "c:salad_ingredients"
+    },
+    {
+      "tag": "c:vegetables"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:vegetable_noodles"
+  },
+  "cookingtime": 200
+}

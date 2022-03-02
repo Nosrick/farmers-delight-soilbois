@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    [
+      {
+        "tag": "c:raw_beef"
+      },
+      {
+        "item": "soilbois:mushroom_stock"
+      }
+    ],
+    {
+      "tag": "c:vegetables"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:beef_stew"
+  },
+  "cookingtime": 200
+}

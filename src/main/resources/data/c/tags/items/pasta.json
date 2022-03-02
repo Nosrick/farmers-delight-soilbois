@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#fabric:pasta",
+      "required": false
+    }
+  ]
+}

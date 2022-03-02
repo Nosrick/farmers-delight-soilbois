@@ -6,6 +6,8 @@
     "soilbois:fruit_porridge",
     "soilbois:fruit_compote",
     "#soilbois:plant_cheeses",
-    "#soilbois:plant_milks"
+    "#soilbois:plant_milks",
+    "soilbois:protein_wrap",
+    "soilbois:roasted_protein_chops"
   ]
 }

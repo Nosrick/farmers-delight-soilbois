@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cooked_chicken",
+    "soilbois:cooked_seitan",
+    {
+      "id": "#fabric:cooked_chicken",
+      "required": false
+    }
+  ]
+}

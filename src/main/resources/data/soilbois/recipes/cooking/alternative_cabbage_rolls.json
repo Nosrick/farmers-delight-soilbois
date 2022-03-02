@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "fabric:crops/cabbage"
+    },
+    [
+      {
+        "tag": "c:raw_meat"
+      },
+      {
+        "tag": "c:vegetables"
+      }
+    ]
+  ],
+  "result": {
+    "item": "farmersdelight:cabbage_rolls"
+  },
+  "cookingtime": 120
+}

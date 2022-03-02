@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "c:cooked_mutton"
+      "tag": "c:cooked_mutton"
     },
     {
       "item": "minecraft:beetroot"
