@@ -1,7 +1,7 @@
 package com.gitlab.nosrick.soilbois.block;
 
 import com.gitlab.nosrick.soilbois.registry.ItemRegistry;
-import com.nhoryzon.mc.farmersdelight.registry.BlocksRegistry;
+import com.gitlab.nosrick.soilbois.tag.Tags;
 import com.nhoryzon.mc.farmersdelight.util.BlockStateUtils;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -23,8 +22,6 @@ import net.minecraft.world.WorldView;
 import java.util.Random;
 
 public class OatCropBlock extends CropBlock implements Fertilizable {
-    public static final IntProperty AGE = Properties.AGE_7;
-    private static final int MATURITY_AGE = 7;
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.createCuboidShape(.0d, .0d, .0d, 16.d, 6.d, 16.d),
             Block.createCuboidShape(.0d, .0d, .0d, 16.d, 6.d, 16.d),
@@ -52,7 +49,8 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
 
     @Override
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
-        return true;
+        BlockState floor = world.getBlockState(pos.down());
+        return floor.isIn(Tags.FARMLAND);
     }
 
     @Override
@@ -68,7 +66,7 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.FARMLAND) || floor.isOf(BlocksRegistry.RICH_SOIL_FARMLAND.get());
+        return floor.isIn(Tags.WILD_CROP_SPAWNS) || floor.isIn(Tags.FARMLAND);
     }
 
     @Override
@@ -89,11 +87,6 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
     @Override
     protected ItemConvertible getSeedsItem() {
         return ItemRegistry.OATS.get();
-    }
-
-    @Override
-    public boolean hasRandomTicks(BlockState state) {
-        return state.get(AGE) < MATURITY_AGE;
     }
 
     @Override
