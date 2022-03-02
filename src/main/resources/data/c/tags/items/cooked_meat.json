@@ -3,6 +3,13 @@
   "values": [
     "soilbois:cooked_seitan",
     "soilbois:cooked_seitan_patty",
-    "soilbois:cooked_seitan_bacon"
+    "soilbois:cooked_seitan_bacon",
+    "minecraft:cooked_beef",
+    "minecraft:cooked_porkchop",
+    "minecraft:cooked_chicken",
+    "minecraft:cooked_mutton",
+    "minecraft:cooked_cod",
+    "minecraft:cooked_rabbit",
+    "minecraft:cooked_salmon"
   ]
 }

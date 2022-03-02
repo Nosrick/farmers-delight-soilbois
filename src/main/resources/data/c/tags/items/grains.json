@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "soilbois:oats"
+    "soilbois:oats",
+    "minecraft:wheat"
   ]
 }

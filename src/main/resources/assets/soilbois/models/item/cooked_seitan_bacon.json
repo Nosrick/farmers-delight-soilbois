@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "soilbois:item/seitan_bacon"
+    "layer0": "soilbois:item/cooked_seitan_bacon"
   }
 }

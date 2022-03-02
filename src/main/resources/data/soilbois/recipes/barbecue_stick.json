@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "fabric:crops/tomato"
+      "tag": "c:vegetables"
     },
     {
-      "tag": "fabric:crops/onion"
+      "tag": "c:vegetables"
     },
     {
-      "tag": "soilbois:meat_substitute"
+      "tag": "c:cooked_meat"
     },
     {
-      "tag": "soilbois:meat_substitute"
+      "tag": "c:cooked_meat"
     },
     {
       "item": "minecraft:stick"

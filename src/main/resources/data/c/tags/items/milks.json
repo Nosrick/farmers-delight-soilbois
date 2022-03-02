@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "soilbois:oat_milk",
+    "#soilbois:plant_milks",
     "minecraft:milk_bucket",
     {
       "id": "farmersdelight:milk_bottle",

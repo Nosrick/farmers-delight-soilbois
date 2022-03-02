@@ -2,6 +2,12 @@
   "replace": false,
   "values": [
     "soilbois:oats",
-    "soilbois:cotton_seeds"
+    "soilbois:cotton_seeds",
+    "minecraft:wheat_seeds",
+    "minecraft:beetroot_seeds",
+    {
+      "id": "#fabric:seeds",
+      "required": false
+    }
   ]
 }

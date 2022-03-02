@@ -2,16 +2,16 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:mushrooms"
+      "tag": "c:mushrooms"
     },
     {
-      "tag": "fabric:mushrooms"
+      "tag": "c:mushrooms"
     },
     {
-      "tag": "fabric:mushrooms"
+      "tag": "c:mushrooms"
     },
     {
-      "tag": "fabric:mushrooms"
+      "tag": "c:mushrooms"
     }
   ],
   "result": {

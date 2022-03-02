@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
-    "raw_seitan",
-    "raw_seitan_patty",
-    "raw_seitan_bacon"
+    "soilbois:raw_seitan",
+    "soilbois:raw_seitan_patty",
+    "soilbois:raw_seitan_bacon",
+    "minecraft:beef",
+    "minecraft:porkchop",
+    "minecraft:chicken",
+    "minecraft:rabbit",
+    "minecraft:mutton",
+    "minecraft:cod",
+    "minecraft:salmon"
   ]
 }
