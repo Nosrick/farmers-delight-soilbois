@@ -25,7 +25,8 @@ public enum BlockRegistry {
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     CRATE_OF_OATS("crate_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD))),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
-    COTTON_CROPS("cotton_crops", CottonCropBlock::new, true);
+    COTTON_CROPS("cotton_crops", CottonCropBlock::new, true),
+    CRATE_OF_COTTON_SEEDS("crate_of_cotton_seeds", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
 
     private final String pathName;
     private final Supplier<Block> blockSupplier;

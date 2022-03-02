@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "soilbois:crate_of_cotton_seeds"
+    }
+  ],
+  "result": {
+    "item": "soilbois:cotton_seeds",
+    "count": 9
+  }
+}

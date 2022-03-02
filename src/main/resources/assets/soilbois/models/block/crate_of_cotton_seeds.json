@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "soilbois:block/crate_of_cotton_seeds"
+  }
+}

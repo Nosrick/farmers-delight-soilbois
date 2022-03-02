@@ -27,6 +27,7 @@ public enum ItemRegistry {
 
     COTTON_SEEDS("cotton_seeds", () -> new ModBlockItem(BlockRegistry.COTTON_CROPS.get())),
     COTTON_PUFFS("cotton_puff", () -> new Item(new ModItemSettings())),
+    CRATE_OF_COTTON_SEEDS("crate_of_cotton_seeds", () -> new ModBlockItem(BlockRegistry.CRATE_OF_COTTON_SEEDS.get())),
 
     OATS("oats", () -> new BlockItem(
             BlockRegistry.OAT_CROPS.get(),
