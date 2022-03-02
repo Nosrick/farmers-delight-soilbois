@@ -2,7 +2,7 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:milk"
+      "tag": "c:milks"
     },
     {
       "item": "soilbois:oats"
@@ -14,10 +14,10 @@
       "item": "soilbois:oats"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     }
   ],
   "result": {

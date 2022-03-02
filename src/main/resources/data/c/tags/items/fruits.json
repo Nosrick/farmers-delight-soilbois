@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:apple",
+    "minecraft:beetroot",
+    "minecraft:chorus_fruit",
+    "minecraft:melon_slice",
+    "minecraft:sweet_berries",
+    {
+      "id": "farmersdelight:pumpkin_slice",
+      "required": false
+    }
+  ]
+}

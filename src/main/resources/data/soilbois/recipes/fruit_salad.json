@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
-      "tag": "fabric:fruits"
+      "tag": "c:fruits"
     },
     {
       "item": "minecraft:bowl"
