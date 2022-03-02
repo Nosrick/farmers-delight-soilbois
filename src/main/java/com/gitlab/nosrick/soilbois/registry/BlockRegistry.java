@@ -23,6 +23,7 @@ import java.util.function.Supplier;
 public enum BlockRegistry {
 
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
+    CRATE_OF_OATS("crate_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD))),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
     COTTON_CROPS("cotton_crops", CottonCropBlock::new, true);
 

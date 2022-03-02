@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soilbois:box_of_oats"
+    }
+  },
+  "result": {
+    "item": "soilbois:crate_of_oats"
+  }
+}

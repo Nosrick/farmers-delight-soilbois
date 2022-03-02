@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "soilbois:crate_of_oats"
+    }
+  ],
+  "result": {
+    "item": "soilbois:box_of_oats",
+    "count": 9
+  }
+}
