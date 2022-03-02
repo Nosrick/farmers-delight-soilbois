@@ -46,7 +46,10 @@ public enum ItemRegistry {
     PLANT_CHEESE_SLICE("plant_cheese_slice", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PLANT_CHEESE_SLICE.get()))),
 
     FRUIT_COMPOTE("fruit_compote", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.FRUIT_COMPOTE.get()))),
-    MUSHROOM_STOCK("mushroom_stock", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.MUSHROOM_STOCK.get())));
+    MUSHROOM_STOCK("mushroom_stock", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.MUSHROOM_STOCK.get()))),
+
+    PROTEIN_WRAP("protein_wrap", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PROTEIN_WRAP.get()))),
+    ROASTED_PROTEIN_CHOPS("roasted_protein_chops", () -> new ConsumableItem(new ModItemSettings()));
 
     private final String pathName;
     private final Supplier<Item> itemSupplier;

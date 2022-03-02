@@ -49,7 +49,10 @@ public enum FoodRegistry {
             false),
 
     FRUIT_COMPOTE(2, 0.4f, false),
-    MUSHROOM_STOCK(2, 0.8f, false);
+    MUSHROOM_STOCK(2, 0.8f, false),
+
+    PROTEIN_WRAP(10, 0.8f),
+    ROASTED_PROTEIN_CHOPS(12, 0.8f);
 
     private final FoodComponent food;
 
