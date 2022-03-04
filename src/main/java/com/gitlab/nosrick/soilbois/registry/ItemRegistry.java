@@ -81,16 +81,30 @@ public enum ItemRegistry {
             if (value.burnTime != null) {
                 FuelRegistry.INSTANCE.add(value.get(), value.burnTime);
             }
+        }
+    }
 
-            if(value.item.isFood()
-                && value.item.getFoodComponent().getSaturationModifier() > 0f) {
+    public static void registerCompostables() {
+        for (ItemRegistry value : values()) {
+            if (value.item.isFood()
+                    && value.item.getFoodComponent().getSaturationModifier() > 0f) {
                 CompostingChanceRegistry.INSTANCE.add(
                         value.item,
                         value.item.getFoodComponent().getSaturationModifier());
+
+                COMPOSTABLES.add(value.item);
             }
+
         }
 
         CompostingChanceRegistry.INSTANCE.add(COTTON_SEEDS.get(), 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(OAT_SEEDS.get(), 0.3f);
+        COMPOSTABLES.add(COTTON_SEEDS.get());
+        COMPOSTABLES.add(OAT_SEEDS.get());
+    }
+
+    public static List<Item> getCompostables() {
+        return COMPOSTABLES.stream().toList();
     }
 
     public Item get() {

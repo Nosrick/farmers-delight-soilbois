@@ -72,6 +72,10 @@ jar {
     }
 }
 
+minecraft {
+    accessWidener = file("src/main/resources/soilbois.accesswidener")
+}
+
 // configure the maven publication
 publishing {
     publications {

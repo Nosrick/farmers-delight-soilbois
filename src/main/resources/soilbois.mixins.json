@@ -2,8 +2,13 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.gitlab.nosrick.soilbois.mixin",
+  "refmap": "soilbois-refmap.json",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "FarmerVillagerTaskMixin",
+    "FarmerWorkTaskMixin",
+    "VillagerAccess",
+    "VillagerEntityMixin"
   ],
   "client": [
   ],
