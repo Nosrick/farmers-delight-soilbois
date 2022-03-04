@@ -8,12 +8,13 @@ import com.nhoryzon.mc.farmersdelight.item.ModItemSettings;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public enum ItemRegistry {
@@ -26,15 +27,21 @@ public enum ItemRegistry {
     SEITAN_BACON("cooked_seitan_bacon", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_BACON.get()))),
     SEITAN_SANDWICH("seitan_sandwich", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_SANDWICH.get()))),
 
-    COTTON_SEEDS("cotton_seeds", () -> new ModBlockItem(BlockRegistry.COTTON_CROPS.get())),
+    COTTON_SEEDS("cotton_seeds", () -> new AliasedBlockItem(
+            BlockRegistry.COTTON_CROPS.get(),
+            new FabricItemSettings()
+                    .group(FarmersDelightMod.ITEM_GROUP))),
     COTTON_PUFFS("cotton_puff", () -> new Item(new ModItemSettings())),
     CRATE_OF_COTTON_SEEDS("crate_of_cotton_seeds", () -> new ModBlockItem(BlockRegistry.CRATE_OF_COTTON_SEEDS.get())),
 
-    OATS("oats", () -> new BlockItem(
-            BlockRegistry.OAT_CROPS.get(),
+    OATS("oats", () -> new ConsumableItem(
             new FabricItemSettings()
                     .group(FarmersDelightMod.ITEM_GROUP)
                     .food(FoodRegistry.OATS.get()))),
+    OAT_SEEDS("oat_seeds", () -> new AliasedBlockItem(
+            BlockRegistry.OAT_CROPS.get(),
+            new FabricItemSettings()
+                    .group(FarmersDelightMod.ITEM_GROUP))),
     BOX_OF_OATS("box_of_oats", () -> new ModBlockItem(BlockRegistry.BOX_OF_OATS.get())),
     CRATE_OF_OATS("crate_of_oats", () -> new ModBlockItem(BlockRegistry.CRATE_OF_OATS.get())),
     OAT_MILK("oat_milk", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.OAT_MILK.get()))),
@@ -55,6 +62,8 @@ public enum ItemRegistry {
     private final Supplier<Item> itemSupplier;
     private final Integer burnTime;
     private Item item;
+
+    private final static List<Item> COMPOSTABLES = new ArrayList<>();
 
     ItemRegistry(String pathName, Supplier<Item> itemSupplier) {
         this(pathName, itemSupplier, null);

@@ -57,11 +57,11 @@ public enum FoodRegistry {
     private final FoodComponent food;
 
     FoodRegistry(int hunger, float saturation) {
-        this(hunger, saturation, null, .0f, false, false, false);
+        this(hunger, saturation, null, 0f, false, false, false);
     }
 
     FoodRegistry(int hunger, float saturation, boolean isMeat) {
-        this(hunger, saturation, null, .0f, isMeat, false, false);
+        this(hunger, saturation, null, 0f, isMeat, false, false);
     }
 
     FoodRegistry(int hunger, float saturation, StatusEffectInstance effect, float effectChance) {
@@ -72,18 +72,30 @@ public enum FoodRegistry {
         this(hunger, saturation, effect, effectChance, isMeat, false, false);
     }
 
-    FoodRegistry(int hunger, float saturation, StatusEffectInstance effect, float effectChance, boolean isMeat, boolean isFastToEat, boolean alwaysEdible) {
+    FoodRegistry(
+            int hunger,
+            float saturation,
+            StatusEffectInstance effect,
+            float effectChance,
+            boolean isMeat,
+            boolean isFastToEat,
+            boolean alwaysEdible) {
+
         FoodComponent.Builder builder = new FoodComponent.Builder();
         builder.hunger(hunger).saturationModifier(saturation);
+
         if (effect != null) {
             builder.statusEffect(effect, effectChance);
         }
+
         if (isMeat) {
             builder.meat();
         }
+
         if (isFastToEat) {
             builder.snack();
         }
+
         if (alwaysEdible) {
             builder.alwaysEdible();
         }

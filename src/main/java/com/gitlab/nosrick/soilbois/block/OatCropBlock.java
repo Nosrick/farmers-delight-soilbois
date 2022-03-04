@@ -76,7 +76,7 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(ItemRegistry.OATS.get());
+        return new ItemStack(ItemRegistry.OAT_SEEDS.get());
     }
 
     @Override
@@ -86,7 +86,7 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ItemRegistry.OATS.get();
+        return ItemRegistry.OAT_SEEDS.get();
     }
 
     @Override
