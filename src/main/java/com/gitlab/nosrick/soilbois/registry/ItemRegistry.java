@@ -56,7 +56,7 @@ public enum ItemRegistry {
     MUSHROOM_STOCK("mushroom_stock", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.MUSHROOM_STOCK.get()))),
 
     PROTEIN_WRAP("protein_wrap", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.PROTEIN_WRAP.get()))),
-    ROASTED_PROTEIN_CHOPS("roasted_protein_chops", () -> new ConsumableItem(new ModItemSettings()));
+    ROASTED_PROTEIN_CHOPS("roasted_protein_chops", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.ROASTED_PROTEIN_CHOPS.get())));
 
     private final String pathName;
     private final Supplier<Item> itemSupplier;
