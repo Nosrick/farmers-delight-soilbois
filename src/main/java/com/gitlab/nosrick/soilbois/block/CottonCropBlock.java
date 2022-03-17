@@ -2,7 +2,7 @@ package com.gitlab.nosrick.soilbois.block;
 
 import com.gitlab.nosrick.soilbois.registry.ItemRegistry;
 import com.gitlab.nosrick.soilbois.tag.Tags;
-import com.nhoryzon.mc.farmersdelight.util.BlockStateUtils;
+import com.gitlab.nosrick.soilbois.util.BlockStateUtils;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;

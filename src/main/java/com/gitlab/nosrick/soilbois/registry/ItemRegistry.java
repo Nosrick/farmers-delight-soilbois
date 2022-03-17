@@ -1,10 +1,9 @@
 package com.gitlab.nosrick.soilbois.registry;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
-import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
-import com.nhoryzon.mc.farmersdelight.item.ConsumableItem;
-import com.nhoryzon.mc.farmersdelight.item.ModBlockItem;
-import com.nhoryzon.mc.farmersdelight.item.ModItemSettings;
+import com.gitlab.nosrick.soilbois.item.ConsumableItem;
+import com.gitlab.nosrick.soilbois.item.ModBlockItem;
+import com.gitlab.nosrick.soilbois.item.ModItemSettings;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -30,18 +29,18 @@ public enum ItemRegistry {
     COTTON_SEEDS("cotton_seeds", () -> new AliasedBlockItem(
             BlockRegistry.COTTON_CROPS.get(),
             new FabricItemSettings()
-                    .group(FarmersDelightMod.ITEM_GROUP))),
+                    .group(SoilBoisMod.ITEM_GROUP))),
     COTTON_PUFFS("cotton_puff", () -> new Item(new ModItemSettings())),
     CRATE_OF_COTTON_SEEDS("crate_of_cotton_seeds", () -> new ModBlockItem(BlockRegistry.CRATE_OF_COTTON_SEEDS.get())),
 
     OATS("oats", () -> new ConsumableItem(
             new FabricItemSettings()
-                    .group(FarmersDelightMod.ITEM_GROUP)
+                    .group(SoilBoisMod.ITEM_GROUP)
                     .food(FoodRegistry.OATS.get()))),
     OAT_SEEDS("oat_seeds", () -> new AliasedBlockItem(
             BlockRegistry.OAT_CROPS.get(),
             new FabricItemSettings()
-                    .group(FarmersDelightMod.ITEM_GROUP))),
+                    .group(SoilBoisMod.ITEM_GROUP))),
     BOX_OF_OATS("box_of_oats", () -> new ModBlockItem(BlockRegistry.BOX_OF_OATS.get())),
     CRATE_OF_OATS("crate_of_oats", () -> new ModBlockItem(BlockRegistry.CRATE_OF_OATS.get())),
     OAT_MILK("oat_milk", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.OAT_MILK.get()))),

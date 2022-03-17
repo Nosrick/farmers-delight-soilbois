@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "soilbois:block/acacia_pantry_side",
+    "front": "soilbois:block/acacia_pantry_front_open",
+    "top": "soilbois:block/acacia_pantry_top"
+  }
+}

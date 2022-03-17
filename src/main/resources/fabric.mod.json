@@ -3,8 +3,8 @@
   "id": "soilbois",
   "version": "${version}",
 
-  "name": "Farmer's Delight: Soilbois",
-  "description": "Adds more plant-based stuff to Farmer's Delight.",
+  "name": "Soilbois",
+  "description": "A gentle expansion of the food system, using Farmer's Delight as a base.",
   "authors": [
     "nosrick"
   ],

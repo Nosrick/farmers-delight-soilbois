@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_farmland",
+  "textures": {
+    "particle": "soilbois:block/rich_soil",
+    "dirt": "soilbois:block/rich_soil",
+    "top": "soilbois:block/rich_soil_farmland"
+  }
+}

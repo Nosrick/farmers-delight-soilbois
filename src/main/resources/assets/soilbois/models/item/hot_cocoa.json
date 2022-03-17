@@ -1,0 +1,6 @@
+{
+  "parent": "soilbois:item/mug",
+  "textures": {
+    "layer0": "soilbois:item/hot_cocoa"
+  }
+}

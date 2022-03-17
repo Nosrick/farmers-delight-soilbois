@@ -1,0 +1,6 @@
+{
+  "parent": "soilbois:block/crop_cross",
+  "textures": {
+    "cross": "soilbois:block/cabbages_stage6"
+  }
+}

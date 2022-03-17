@@ -6,8 +6,14 @@ import com.gitlab.nosrick.soilbois.tag.Tags;
 import com.google.common.collect.ImmutableMap;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.PlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +22,13 @@ import java.util.Arrays;
 public class SoilBoisMod implements ModInitializer {
     public static final String MOD_ID = "soilbois";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "main"),
+            () -> new ItemStack(ItemRegistry.COOKED_SEITAN.get()));
+
+    public static Identifier identifier(String path) {
+        return new Identifier(MOD_ID, path);
+    }
 
     @Override
     public void onInitialize() {
@@ -32,8 +45,10 @@ public class SoilBoisMod implements ModInitializer {
         Tags.registerAll();
 
         modifyVillagerFoodItems();
-        //modifyVillagerGatherables();
-        //modifyVillagerFarmerTaskCompostables();
+    }
+
+    public static TranslatableText i18n(String key, Object... args) {
+        return new TranslatableText(MOD_ID + "." + key, args);
     }
 
     protected void registerBiomeModifications() {
@@ -41,12 +56,18 @@ public class SoilBoisMod implements ModInitializer {
                 context.getBiome().getTemperature() < 1f
                 && context.getBiome().getDownfall() > 0,
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                GenerationRegistry.PATCH_WILD_OATS.key());
+                PlacedFeatures.register(
+                        GenerationRegistry.PATCH_WILD_OATS.getFeatureId(),
+                        GenerationRegistry.PATCH_WILD_OATS.getRegistryEntry(),
+                        GenerationRegistry.PATCH_WILD_OATS.getPlacementModifiers()).getKey().get());
 
         BiomeModifications.addFeature(context ->
                 context.getBiome().getTemperature() > 0.3f && context.getBiome().getDownfall() > 0.4f,
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                GenerationRegistry.PATCH_WILD_COTTON.key());
+                PlacedFeatures.register(
+                        GenerationRegistry.PATCH_WILD_COTTON.getFeatureId(),
+                        GenerationRegistry.PATCH_WILD_COTTON.getRegistryEntry(),
+                        GenerationRegistry.PATCH_WILD_COTTON.getPlacementModifiers()).getKey().get());
     }
 
     protected void modifyVillagerFoodItems() {
@@ -62,21 +83,4 @@ public class SoilBoisMod implements ModInitializer {
 
         VillagerAccess.setItemFoodValues(villagerFoodItems.build());
     }
-/*
-    protected void modifyVillagerGatherables() {
-        ImmutableSet.Builder<Item> villagerGatherables = new ImmutableSet.Builder<Item>()
-                .addAll(VillagerAccess.getGatherableItems());
-
-        Tags.VILLAGER_PLANTABLES.values().forEach(villagerGatherables::add);
-        Tags.VILLAGER_GATHERABLES.values().forEach(villagerGatherables::add);
-
-        VillagerAccess.setGatherableItems(villagerGatherables.build());
-    }
-    protected void modifyVillagerFarmerTaskCompostables() {
-        List<Item> baseItems = FarmerWorkTaskAccessor.getCompostables();
-        List<Item> newItems = Lists.newArrayList(baseItems);
-        newItems.addAll(Tags.VILLAGER_COMPOSTABLES.values());
-        FarmerWorkTaskAccessor.setCompostables(newItems);
-    }
-*/
 }

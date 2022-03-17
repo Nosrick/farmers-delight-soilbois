@@ -37,7 +37,7 @@ public abstract class FarmerVillagerTaskMixin {
     public void running(ServerWorld serverWorld, VillagerEntity villagerEntity, long l, CallbackInfo ci,
                         BlockState blockState, Block block, Block block2,
                         SimpleInventory inventory, int i, ItemStack itemStack) {
-        if (Tags.VILLAGER_PLANTABLES.contains(itemStack.getItem())
+        if (itemStack.isIn(Tags.VILLAGER_PLANTABLES)
                 && itemStack.getItem() instanceof BlockItem blockItem) {
             serverWorld.setBlockState(this.currentTarget, blockItem.getBlock().getDefaultState(), 3);
             planted = true;

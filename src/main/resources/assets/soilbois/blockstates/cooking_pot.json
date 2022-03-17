@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,down=false": {
+      "model": "soilbois:block/cooking_pot"
+    },
+    "facing=south,down=false": {
+      "model": "soilbois:block/cooking_pot",
+      "y": 180
+    },
+    "facing=west,down=false": {
+      "model": "soilbois:block/cooking_pot",
+      "y": 270
+    },
+    "facing=east,down=false": {
+      "model": "soilbois:block/cooking_pot",
+      "y": 90
+    },
+    "facing=north,down=true": {
+      "model": "soilbois:block/cooking_pot_supported"
+    },
+    "facing=south,down=true": {
+      "model": "soilbois:block/cooking_pot_supported",
+      "y": 180
+    },
+    "facing=west,down=true": {
+      "model": "soilbois:block/cooking_pot_supported",
+      "y": 270
+    },
+    "facing=east,down=true": {
+      "model": "soilbois:block/cooking_pot_supported",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "soilbois:block/beetroot_crate_side",
+    "bottom": "soilbois:block/crate_bottom",
+    "top": "soilbois:block/beetroot_crate_top"
+  }
+}

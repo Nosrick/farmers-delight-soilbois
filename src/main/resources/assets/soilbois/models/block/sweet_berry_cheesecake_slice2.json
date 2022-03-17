@@ -1,0 +1,9 @@
+{
+	"parent": "soilbois:block/pie_slice2",
+	"textures": {
+		"bottom": "soilbois:block/pie_bottom",
+		"inner": "soilbois:block/sweet_berry_cheesecake_inner",
+		"side": "soilbois:block/pie_side",
+		"top": "soilbois:block/sweet_berry_cheesecake_top"
+	}
+}

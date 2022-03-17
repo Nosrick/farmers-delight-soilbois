@@ -1,0 +1,6 @@
+{
+  "parent": "soilbois:block/bush_crop",
+  "textures": {
+    "crop": "soilbois:block/wild_onions"
+  }
+}

@@ -1,33 +1,28 @@
 package com.gitlab.nosrick.soilbois.tag;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
-import net.minecraft.util.Identifier;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.registry.Registry;
 
 public class Tags {
 
-    public static Tag.Identified<Block> FARMLAND;
-    public static Tag.Identified<Block> WILD_CROP_SPAWNS;
-    public static Tag.Identified<Item> CROPS;
-    public static Tag.Identified<Item> SEEDS;
-    public static Tag.Identified<Item> VILLAGER_COMPOSTABLES;
-    public static Tag.Identified<Item> VILLAGER_PLANTABLES;
-    public static Tag.Identified<Item> VILLAGER_GATHERABLES;
+    public static TagKey<Block> FARMLAND;
+    public static TagKey<Block> WILD_CROP_SPAWNS;
+    public static TagKey<Item> CROPS;
+    public static TagKey<Item> SEEDS;
+    public static TagKey<Item> VILLAGER_COMPOSTABLES;
+    public static TagKey<Item> VILLAGER_PLANTABLES;
+    public static TagKey<Item> VILLAGER_GATHERABLES;
 
     public static void registerAll() {
-        FARMLAND = create("farmland", TagFactory.BLOCK);
-        WILD_CROP_SPAWNS = create("wild_crop_spawns", TagFactory.BLOCK);
-        CROPS = create("crops", TagFactory.ITEM);
-        SEEDS = create("seeds", TagFactory.ITEM);
-        VILLAGER_COMPOSTABLES = create("villager_compostables", TagFactory.ITEM);
-        VILLAGER_PLANTABLES = create("villager_plantables", TagFactory.ITEM);
-        VILLAGER_GATHERABLES = create("villager_gatherables", TagFactory.ITEM);
-    }
-
-    private static <E> Tag.Identified<E> create(String pathName, TagFactory<E> tagFactory) {
-        return tagFactory.create(new Identifier(SoilBoisMod.MOD_ID, pathName));
+        FARMLAND = TagKey.of(Registry.BLOCK_KEY, SoilBoisMod.identifier("farmland"));
+        WILD_CROP_SPAWNS = TagKey.of(Registry.BLOCK_KEY, SoilBoisMod.identifier("wild_crop_spawns"));
+        CROPS = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("crops"));
+        SEEDS = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("seeds"));
+        VILLAGER_COMPOSTABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_compostables"));
+        VILLAGER_PLANTABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_plantables"));
+        VILLAGER_GATHERABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_gatherables"));
     }
 }

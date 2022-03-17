@@ -4,23 +4,33 @@ import com.gitlab.nosrick.soilbois.SoilBoisMod;
 import com.gitlab.nosrick.soilbois.block.BoxOfOatsBlock;
 import com.gitlab.nosrick.soilbois.block.CottonCropBlock;
 import com.gitlab.nosrick.soilbois.block.OatCropBlock;
-import com.nhoryzon.mc.farmersdelight.block.WildCropBlock;
+import com.gitlab.nosrick.soilbois.block.PantryBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Supplier;
 
 public enum BlockRegistry {
+
+    OAK_PANTRY("oak_pantry", PantryBlock::new),
+    BIRCH_PANTRY("birch_pantry", PantryBlock::new),
+    SPRUCE_PANTRY("spruce_pantry", PantryBlock::new),
+    JUNGLE_PANTRY("jungle_pantry", PantryBlock::new),
+    ACACIA_PANTRY("acacia_pantry", PantryBlock::new),
+    DARK_OAK_PANTRY("dark_oak_pantry", PantryBlock::new),
+    CRIMSON_PANTRY("crimson_pantry", PantryBlock::new),
+    WARPED_PANTRY("warped_pantry", PantryBlock::new),
 
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     CRATE_OF_OATS("crate_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD))),
@@ -28,11 +38,13 @@ public enum BlockRegistry {
     COTTON_CROPS("cotton_crops", CottonCropBlock::new, true),
     CRATE_OF_COTTON_SEEDS("crate_of_cotton_seeds", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
 
-    private final String pathName;
-    private final Supplier<Block> blockSupplier;
-    private final FlammableBlockRegistry.Entry flammableRate;
-    private final boolean isCutout;
-    private Block block;
+    protected final String pathName;
+    protected final Supplier<Block> blockSupplier;
+    protected final FlammableBlockRegistry.Entry flammableRate;
+    protected final boolean isCutout;
+    protected Block block;
+
+    protected static Block[] pantries;
 
     BlockRegistry(String pathName, Supplier<Block> blockSupplier) {
         this(pathName, blockSupplier, false, new FlammableBlockRegistry.Entry(0, 0));
@@ -82,5 +94,20 @@ public enum BlockRegistry {
         }
 
         return block;
+    }
+
+    public static Block[] getPantries() {
+        if(pantries == null) {
+            List<Block> blocks = Arrays.stream(
+                            BlockRegistry.values())
+                    .map(BlockRegistry::get)
+                    .filter(b -> b instanceof PantryBlock)
+                    .toList();
+
+            pantries = new Block[blocks.size()];
+            pantries = blocks.toArray(pantries);
+        }
+
+        return pantries;
     }
 }

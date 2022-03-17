@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Mixin(value = FarmerWorkTask.class, priority = 999)
 public abstract class FarmerWorkTaskMixin {
@@ -39,7 +40,7 @@ public abstract class FarmerWorkTaskMixin {
             int l, ItemStack itemStack, int m) {
 
         if(m == -1){
-            m = Tags.VILLAGER_COMPOSTABLES.values().indexOf(itemStack.getItem());
+            m = itemStack.isIn(Tags.VILLAGER_COMPOSTABLES) ? 0 : -1;
             if(m != -1){
                 SoilBoisMod.LOGGER.info("WE DID IT LADS");
             }

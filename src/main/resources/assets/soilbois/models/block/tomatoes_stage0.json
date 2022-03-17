@@ -1,0 +1,6 @@
+{
+  "parent": "soilbois:block/crop_cross",
+  "textures": {
+    "cross": "soilbois:block/tomatoes_stage0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "soilbois:block/rich_soil"
+      },
+      {
+        "model": "soilbois:block/rich_soil",
+        "y": 90
+      },
+      {
+        "model": "soilbois:block/rich_soil",
+        "y": 180
+      },
+      {
+        "model": "soilbois:block/rich_soil",
+        "y": 270
+      }
+    ]
+  }
+}

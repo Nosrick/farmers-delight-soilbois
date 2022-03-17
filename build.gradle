@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.10-SNAPSHOT'
+    id 'fabric-loom' version '0.11-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -40,9 +40,6 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation("curse.maven:farmers-delight-fabric-482834:${project.farmersdelight_version}")
-
-    modRuntimeOnly("curse.maven:farmers-delight-fabric-482834:${project.farmersdelight_version}")
     modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
 }
 
@@ -72,8 +69,8 @@ jar {
     }
 }
 
-minecraft {
-    accessWidener = file("src/main/resources/soilbois.accesswidener")
+loom {
+    accessWidenerPath = file("src/main/resources/soilbois.accesswidener")
 }
 
 // configure the maven publication

@@ -1,7 +1,7 @@
 package com.gitlab.nosrick.soilbois.registry;
 
-import com.nhoryzon.mc.farmersdelight.registry.EffectsRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 
 public enum FoodRegistry {
@@ -15,7 +15,7 @@ public enum FoodRegistry {
     SEITAN_SANDWICH(
             12,
             0.85f,
-            new StatusEffectInstance(EffectsRegistry.NOURISHED.get()),
+            new StatusEffectInstance(StatusEffects.SATURATION),
             100f,
             false,
             false,
@@ -25,7 +25,7 @@ public enum FoodRegistry {
     OAT_MILK(
             4,
             0.5f,
-            new StatusEffectInstance(EffectsRegistry.COMFORT.get()),
+            new StatusEffectInstance(StatusEffects.SATURATION),
             100f,
             false,
             true,

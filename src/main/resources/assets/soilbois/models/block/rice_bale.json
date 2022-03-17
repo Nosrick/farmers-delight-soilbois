@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "soilbois:block/rice_bale_top",
+    "side": "soilbois:block/rice_bale_side",
+    "bottom": "soilbois:block/rice_bale_bottom"
+  }
+}
