@@ -1,10 +1,13 @@
 package com.gitlab.nosrick.soilbois.registry;
 
+import com.gitlab.nosrick.soilbois.SoilBoisMod;
+import com.gitlab.nosrick.soilbois.block.entity.BasketBlockEntity;
 import com.gitlab.nosrick.soilbois.block.entity.PantryBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.util.registry.Registry;
 
 import java.util.function.Supplier;
 
@@ -13,7 +16,12 @@ public enum BlockEntityTypeRegistry {
     PANTRY("pantry",
             PantryBlockEntity.class,
             PantryBlockEntity::new,
-            BlockRegistry.getPantries());
+            BlockRegistry.getPantries()),
+
+    BASKET("basket",
+            BasketBlockEntity.class,
+            BasketBlockEntity::new,
+            BlockRegistry.BASKET.get());
 
     protected final String pathName;
     protected final Class<? extends BlockEntity> blockEntityClass;
@@ -38,5 +46,11 @@ public enum BlockEntityTypeRegistry {
         }
 
         return (BlockEntityType<T>) this.blockEntityType;
+    }
+
+    public static void registerAll() {
+        for(BlockEntityTypeRegistry value : values()) {
+            Registry.register(Registry.BLOCK_ENTITY_TYPE, SoilBoisMod.identifier(value.pathName), value.get());
+        }
     }
 }

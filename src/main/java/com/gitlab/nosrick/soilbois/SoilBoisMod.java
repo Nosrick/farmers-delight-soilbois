@@ -35,6 +35,7 @@ public class SoilBoisMod implements ModInitializer {
         LOGGER.info("FUCK FACTORY FARMING don't @me");
 
         BlockRegistry.registerAll();
+        BlockEntityTypeRegistry.registerAll();
         ItemRegistry.registerAll();
         ItemRegistry.registerCompostables();
 

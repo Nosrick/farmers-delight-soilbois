@@ -1,10 +1,7 @@
 package com.gitlab.nosrick.soilbois.registry;
 
 import com.gitlab.nosrick.soilbois.SoilBoisMod;
-import com.gitlab.nosrick.soilbois.block.BoxOfOatsBlock;
-import com.gitlab.nosrick.soilbois.block.CottonCropBlock;
-import com.gitlab.nosrick.soilbois.block.OatCropBlock;
-import com.gitlab.nosrick.soilbois.block.PantryBlock;
+import com.gitlab.nosrick.soilbois.block.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -12,11 +9,11 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.HayBlock;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
@@ -31,6 +28,10 @@ public enum BlockRegistry {
     DARK_OAK_PANTRY("dark_oak_pantry", PantryBlock::new),
     CRIMSON_PANTRY("crimson_pantry", PantryBlock::new),
     WARPED_PANTRY("warped_pantry", PantryBlock::new),
+
+    BASKET("basket", BasketBlock::new, true),
+
+    STRAW_BALE("straw_bale", () -> new HayBlock(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)), true),
 
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     CRATE_OF_OATS("crate_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD))),
