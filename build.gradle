@@ -31,6 +31,16 @@ repositories {
         name = 'shedaniel maven'
         url "https://maven.shedaniel.me/"
     }
+
+    maven {
+        name = 'wthit'
+        url "https://maven.bai.lol"
+    }
+
+    maven {
+        name = 'terraformers'
+        url "https://maven.terraformersmc.com"
+    }
 }
 
 dependencies {
@@ -40,7 +50,15 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    //REI
     modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
+
+    //WTHIT
+    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
+    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
+
+    //Mod Menu
+    modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
 processResources {
