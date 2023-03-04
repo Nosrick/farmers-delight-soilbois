@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:cooked_beef",
-    "soilbois:cooked_seitan_patty",
-    {
-      "id": "#fabric:cooked_beef",
-      "required": false
-    }
+    "soilbois:cooked_seitan_patty"
   ]
 }

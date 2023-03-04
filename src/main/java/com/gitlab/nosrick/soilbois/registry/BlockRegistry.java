@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public enum BlockRegistry {
-
+/*
     OAK_PANTRY("oak_pantry", PantryBlock::new),
     BIRCH_PANTRY("birch_pantry", PantryBlock::new),
     SPRUCE_PANTRY("spruce_pantry", PantryBlock::new),
@@ -28,11 +28,11 @@ public enum BlockRegistry {
     DARK_OAK_PANTRY("dark_oak_pantry", PantryBlock::new),
     CRIMSON_PANTRY("crimson_pantry", PantryBlock::new),
     WARPED_PANTRY("warped_pantry", PantryBlock::new),
-
     BASKET("basket", BasketBlock::new, true),
 
     STRAW_BALE("straw_bale", () -> new HayBlock(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)), true),
 
+*/
     BOX_OF_OATS("box_of_oats", BoxOfOatsBlock::new),
     CRATE_OF_OATS("crate_of_oats", () -> new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD))),
     OAT_CROPS("oat_crops", OatCropBlock::new, true),
@@ -95,20 +95,5 @@ public enum BlockRegistry {
         }
 
         return block;
-    }
-
-    public static Block[] getPantries() {
-        if(pantries == null) {
-            List<Block> blocks = Arrays.stream(
-                            BlockRegistry.values())
-                    .map(BlockRegistry::get)
-                    .filter(b -> b instanceof PantryBlock)
-                    .toList();
-
-            pantries = new Block[blocks.size()];
-            pantries = blocks.toArray(pantries);
-        }
-
-        return pantries;
     }
 }

@@ -1,12 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#c:seeds/oats",
-    "#c:seeds/cotton",
-    "#c:seeds/cabbage",
-    "#c:seeds/rice",
-    "#c:seeds/tomato",
     "minecraft:wheat_seeds",
-    "minecraft:beetroot_seeds"
+    "minecraft:beetroot_seeds",
+    "minecraft:potato",
+    "minecraft:carrot"
   ]
 }

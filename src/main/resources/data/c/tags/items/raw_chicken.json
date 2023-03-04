@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:chicken",
-    "soilbois:raw_seitan",
-    {
-      "id": "#fabric:raw_chicken",
-      "required": false
-    }
+    "soilbois:raw_seitan"
   ]
 }

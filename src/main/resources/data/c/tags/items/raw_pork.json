@@ -3,10 +3,6 @@
   "values": [
     "minecraft:porkchop",
     "soilbois:raw_seitan_patty",
-    "soilbois:raw_seitan_bacon",
-    {
-      "id": "#fabric:raw_pork",
-      "required": false
-    }
+    "soilbois:raw_seitan_bacon"
   ]
 }

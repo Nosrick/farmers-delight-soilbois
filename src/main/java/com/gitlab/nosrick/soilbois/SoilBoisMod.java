@@ -10,7 +10,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeatures;
@@ -35,7 +35,6 @@ public class SoilBoisMod implements ModInitializer {
         LOGGER.info("FUCK FACTORY FARMING don't @me");
 
         BlockRegistry.registerAll();
-        BlockEntityTypeRegistry.registerAll();
         ItemRegistry.registerAll();
         ItemRegistry.registerCompostables();
 
@@ -48,8 +47,8 @@ public class SoilBoisMod implements ModInitializer {
         modifyVillagerFoodItems();
     }
 
-    public static TranslatableText i18n(String key, Object... args) {
-        return new TranslatableText(MOD_ID + "." + key, args);
+    public static Text i18n(String key, Object... args) {
+        return Text.translatable(MOD_ID + "." + key, args);
     }
 
     protected void registerBiomeModifications() {

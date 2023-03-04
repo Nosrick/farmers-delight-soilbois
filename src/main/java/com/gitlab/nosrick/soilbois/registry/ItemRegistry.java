@@ -18,17 +18,6 @@ import java.util.function.Supplier;
 
 public enum ItemRegistry {
 
-    BASKET("basket", () -> new ModBlockItem(BlockRegistry.BASKET.get())),
-
-    OAK_PANTRY("oak_pantry", () -> new ModBlockItem(BlockRegistry.OAK_PANTRY.get()), 300),
-    BIRCH_PANTRY("birch_pantry", () -> new ModBlockItem(BlockRegistry.BIRCH_PANTRY.get()), 300),
-    SPRUCE_PANTRY("spruce_pantry", () -> new ModBlockItem(BlockRegistry.SPRUCE_PANTRY.get()), 300),
-    JUNGLE_PANTRY("jungle_pantry", () -> new ModBlockItem(BlockRegistry.JUNGLE_PANTRY.get()), 300),
-    ACACIA_PANTRY("acacia_pantry", () -> new ModBlockItem(BlockRegistry.ACACIA_PANTRY.get()), 300),
-    DARK_OAK_PANTRY("dark_oak_pantry", () -> new ModBlockItem(BlockRegistry.DARK_OAK_PANTRY.get()), 300),
-    CRIMSON_PANTRY("crimson_pantry", () -> new ModBlockItem(BlockRegistry.CRIMSON_PANTRY.get())),
-    WARPED_PANTRY("warped_pantry", () -> new ModBlockItem(BlockRegistry.WARPED_PANTRY.get())),
-
     RAW_SEITAN("raw_seitan", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.RAW_SEITAN.get()))),
     COOKED_SEITAN("cooked_seitan", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.COOKED_SEITAN.get()))),
     RAW_SEITAN_PATTY("raw_seitan_patty", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.RAW_SEITAN_PATTY.get()))),
@@ -36,11 +25,6 @@ public enum ItemRegistry {
     RAW_SEITAN_BACON("raw_seitan_bacon", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.RAW_SEITAN_BACON.get()))),
     SEITAN_BACON("cooked_seitan_bacon", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_BACON.get()))),
     SEITAN_SANDWICH("seitan_sandwich", () -> new ConsumableItem(new ModItemSettings().food(FoodRegistry.SEITAN_SANDWICH.get()))),
-
-    CANVAS("canvas", () -> new Item(new ModItemSettings()), 200),
-
-    STRAW("straw", () -> new Item(new ModItemSettings()), 100),
-    STRAW_BALE("straw_bale", () -> new ModBlockItem(BlockRegistry.STRAW_BALE.get()), 900),
 
     COTTON_SEEDS("cotton_seeds", () -> new AliasedBlockItem(
             BlockRegistry.COTTON_CROPS.get(),

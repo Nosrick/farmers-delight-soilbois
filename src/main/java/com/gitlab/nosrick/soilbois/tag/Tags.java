@@ -12,7 +12,7 @@ public class Tags {
     public static TagKey<Block> WILD_CROP_SPAWNS;
     public static TagKey<Item> CROPS;
     public static TagKey<Item> SEEDS;
-    public static TagKey<Item> VILLAGER_COMPOSTABLES;
+    //public static TagKey<Item> VILLAGER_COMPOSTABLES;
     public static TagKey<Item> VILLAGER_PLANTABLES;
     public static TagKey<Item> VILLAGER_GATHERABLES;
 
@@ -21,7 +21,7 @@ public class Tags {
         WILD_CROP_SPAWNS = TagKey.of(Registry.BLOCK_KEY, SoilBoisMod.identifier("wild_crop_spawns"));
         CROPS = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("crops"));
         SEEDS = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("seeds"));
-        VILLAGER_COMPOSTABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_compostables"));
+        //VILLAGER_COMPOSTABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_compostables"));
         VILLAGER_PLANTABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_plantables"));
         VILLAGER_GATHERABLES = TagKey.of(Registry.ITEM_KEY, SoilBoisMod.identifier("villager_gatherables"));
     }

@@ -13,13 +13,12 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
-
-import java.util.Random;
 
 public class OatCropBlock extends CropBlock implements Fertilizable {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -48,7 +47,7 @@ public class OatCropBlock extends CropBlock implements Fertilizable {
     }
 
     @Override
-    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+    public boolean canGrow(World world, net.minecraft.util.math.random.Random random, BlockPos pos, BlockState state) {
         BlockState floor = world.getBlockState(pos.down());
         return floor.isIn(Tags.FARMLAND);
     }

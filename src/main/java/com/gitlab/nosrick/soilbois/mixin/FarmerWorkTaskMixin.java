@@ -1,33 +1,21 @@
 package com.gitlab.nosrick.soilbois.mixin;
 
-import com.gitlab.nosrick.soilbois.SoilBoisMod;
 import com.gitlab.nosrick.soilbois.registry.ItemRegistry;
-import com.gitlab.nosrick.soilbois.tag.Tags;
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.ai.brain.task.FarmerWorkTask;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.dynamic.GlobalPos;
-import net.minecraft.util.math.BlockPos;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Mixin(value = FarmerWorkTask.class, priority = 999)
 public abstract class FarmerWorkTaskMixin {
 
     //Inject a check against a separate list AFTER the COMPOSTABLES.indexOf() check?
+    /*
     @Inject(method = "compostSeeds",
             at = @At(
                     value = "INVOKE_ASSIGN",
@@ -46,6 +34,7 @@ public abstract class FarmerWorkTaskMixin {
             }
         }
     }
+     */
 
     @Inject(method = "performAdditionalWork",
             at = @At(

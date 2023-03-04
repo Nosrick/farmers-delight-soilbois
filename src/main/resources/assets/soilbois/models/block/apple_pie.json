@@ -1,8 +1,0 @@
-{
-	"parent": "soilbois:block/pie",
-	"textures": {
-		"bottom": "soilbois:block/pie_bottom",
-		"side": "soilbois:block/pie_side",
-		"top": "soilbois:block/apple_pie_top"
-	}
-}

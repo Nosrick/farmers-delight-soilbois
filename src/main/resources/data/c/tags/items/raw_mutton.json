@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:mutton",
-    "soilbois:raw_seitan_patty",
-    {
-      "id": "#fabric:raw_mutton",
-      "required": false
-    }
+    "soilbois:raw_seitan_patty"
   ]
 }

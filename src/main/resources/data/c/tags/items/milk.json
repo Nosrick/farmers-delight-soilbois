@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#soilbois:plant_milks",
+    "minecraft:milk_bucket"
+  ]
+}

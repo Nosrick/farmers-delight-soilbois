@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.11-SNAPSHOT'
+    id 'fabric-loom' version '1.1-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -50,15 +50,14 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    //REI
-    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
-
     //WTHIT
-    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
-    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
+    modImplementation "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
 
     //Mod Menu
-    modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}")
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+    //Farmer's Delight
+    modImplementation("curse.maven:farmersdelightfabric-482834:${project.delight_version}")
 }
 
 processResources {

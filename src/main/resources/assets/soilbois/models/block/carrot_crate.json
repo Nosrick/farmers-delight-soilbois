@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "side": "soilbois:block/carrot_crate_side",
-    "bottom": "soilbois:block/crate_bottom",
-    "top": "soilbois:block/carrot_crate_top"
-  }
-}

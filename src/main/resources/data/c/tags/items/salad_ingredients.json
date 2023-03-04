@@ -10,10 +10,6 @@
     {
       "id": "farmersdelight:tomato",
       "required": false
-    },
-    {
-      "id": "#fabric:salad_ingredients",
-      "required": false
     }
   ]
 }

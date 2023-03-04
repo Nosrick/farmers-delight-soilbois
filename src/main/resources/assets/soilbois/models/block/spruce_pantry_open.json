@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "side": "soilbois:block/spruce_pantry_side",
-    "front": "soilbois:block/spruce_pantry_front_open",
-    "top": "soilbois:block/spruce_pantry_top"
-  }
-}

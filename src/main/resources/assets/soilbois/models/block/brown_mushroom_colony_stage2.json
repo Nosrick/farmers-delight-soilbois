@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "soilbois:block/brown_mushroom_colony_stage2"
-  }
-}

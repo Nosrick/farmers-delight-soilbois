@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:beef",
-    "soilbois:raw_seitan_patty",
-    {
-      "id": "#fabric:raw_beef",
-      "required": false
-    }
+    "soilbois:raw_seitan_patty"
   ]
 }
