@@ -5,17 +5,17 @@
       "tag": "c:milk"
     },
     {
-      "item": "soilbois:oats"
+      "item": "soilbois:plant_cheese"
     },
     {
-      "item": "soilbois:oats"
+      "tag": "c:pasta"
     },
     {
-      "item": "soilbois:oats"
+      "tag": "c:salt_dusts"
     }
   ],
   "result": {
-    "item": "soilbois:plain_porridge"
+    "item": "expandeddelight:mac_and_cheese"
   },
   "container": {
     "item": "minecraft:bowl"

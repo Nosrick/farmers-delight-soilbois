@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    [
+      {
+        "tag": "c:raw_pork"
+      }
+    ],
+    {
+      "tag": "c:crops/asparagus"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "soilbois:plant_cheese_slice"
+    }
+  ],
+  "result": {
+    "item": "expandeddelight:asparagus_and_bacon_cheesy"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "soilbois:plant_cheese_slice"
+    }
+  ],
+  "result": {
+    "item": "expandeddelight:cheese_sandwich"
+  }
+}

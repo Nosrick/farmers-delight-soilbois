@@ -2,7 +2,7 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "fabric:crops/cabbage"
+      "tag": "c:crops/cabbage"
     },
     [
       {

@@ -39,7 +39,7 @@ repositories {
 
     maven {
         name = 'terraformers'
-        url "https://maven.terraformersmc.com"
+        url "https://maven.terraformersmc.com/releases"
     }
 }
 
@@ -56,8 +56,16 @@ dependencies {
     //Mod Menu
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
+    //EMI
+    modLocalRuntime("dev.emi:emi:${project.emi_version}") {
+        transitive = false
+    }
+
     //Farmer's Delight
     modImplementation("curse.maven:farmersdelightfabric-482834:${project.delight_version}")
+
+    //Expanded Delight
+    modImplementation("curse.maven:expanded-delight-620770:${project.xpd_delight_version}")
 }
 
 processResources {
