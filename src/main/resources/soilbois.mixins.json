@@ -5,6 +5,7 @@
   "refmap": "soilbois-refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+
   ],
   "client": [
   ],
