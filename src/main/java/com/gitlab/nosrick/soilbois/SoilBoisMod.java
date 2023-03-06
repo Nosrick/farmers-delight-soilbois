@@ -1,23 +1,24 @@
 package com.gitlab.nosrick.soilbois;
 
-import com.gitlab.nosrick.soilbois.mixin.VillagerAccess;
-import com.gitlab.nosrick.soilbois.registry.*;
+import com.gitlab.nosrick.soilbois.registry.BlockRegistry;
+import com.gitlab.nosrick.soilbois.registry.GenerationRegistry;
+import com.gitlab.nosrick.soilbois.registry.ItemRegistry;
 import com.gitlab.nosrick.soilbois.tag.Tags;
-import com.google.common.collect.ImmutableMap;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.Item;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Arrays;
 
 public class SoilBoisMod implements ModInitializer {
     public static final String MOD_ID = "soilbois";
@@ -41,10 +42,9 @@ public class SoilBoisMod implements ModInitializer {
         GenerationRegistry.registerAll();
 
         registerBiomeModifications();
+        registerLootTableModifications();
 
         Tags.registerAll();
-
-        modifyVillagerFoodItems();
     }
 
     public static Text i18n(String key, Object... args) {
@@ -70,17 +70,24 @@ public class SoilBoisMod implements ModInitializer {
                         GenerationRegistry.PATCH_WILD_COTTON.getPlacementModifiers()).getKey().get());
     }
 
-    protected void modifyVillagerFoodItems() {
-        ImmutableMap.Builder<Item, Integer> villagerFoodItems = new ImmutableMap.Builder<Item, Integer>()
-                .putAll(VillagerAccess.getItemFoodValues());
+    protected void registerLootTableModifications() {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (source.isBuiltin()) {
+                if (Blocks.GRASS.getLootTableId().equals(id)) {
+                    LootPool.Builder poolBuilder = LootPool.builder()
+                            .with(ItemEntry.builder(ItemRegistry.OAT_SEEDS.get()))
+                            .with(ItemEntry.builder(ItemRegistry.COTTON_SEEDS.get()));
 
-        Arrays.stream(ItemRegistry.values())
-                .map(ItemRegistry::get)
-                .filter(Item::isFood)
-                .forEach(item -> villagerFoodItems.put(
-                        item,
-                        item.getFoodComponent().getHunger()));
+                    tableBuilder.pool(poolBuilder);
+                }
+                else if(Blocks.TALL_GRASS.getLootTableId().equals(id)) {
+                    LootPool.Builder poolBuilder = LootPool.builder()
+                            .with(ItemEntry.builder(ItemRegistry.OAT_SEEDS.get()))
+                            .with(ItemEntry.builder(ItemRegistry.COTTON_SEEDS.get()));
 
-        VillagerAccess.setItemFoodValues(villagerFoodItems.build());
+                    tableBuilder.pool(poolBuilder);
+                }
+            }
+        });
     }
 }
